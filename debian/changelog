@@ -1,3 +1,9 @@
+python2.7 (2.7.18-13.0.1) unstable; urgency=medium
+
+  * Fixed GDB py-bt by removing PGO.
+
+ -- Ciel Avenir <cielartisan@gmail.com>  Fri, 03 Jul 2022 12:00:00 +0900
+
 python2.7 (2.7.18-13) unstable; urgency=medium
 
   * Skip tests requiring TLS 1.2 under OpenSSL 3.

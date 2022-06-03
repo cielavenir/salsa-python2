@@ -170,14 +170,14 @@ ifneq (,$(filter $(DEB_HOST_ARCH), ppc64 ppc64el))
     DEBUG_CFLAGS += -fexceptions
 endif
 
-ifeq ($(DEB_HOST_ARCH_OS),linux)
-  ifneq (,$(filter $(DEB_HOST_ARCH), amd64 arm64 armel armhf i386 powerpc ppc64 ppc64el s390x x32))
-    with_pgo := yes
-  endif
-endif
-ifneq ($(DEB_HOST_GNU_TYPE),$(DEB_BUILD_GNU_TYPE))
-  with_pgo :=
-endif
+#ifeq ($(DEB_HOST_ARCH_OS),linux)
+#  ifneq (,$(filter $(DEB_HOST_ARCH), amd64 arm64 armel armhf i386 powerpc ppc64 ppc64el s390x x32))
+#    with_pgo := yes
+#  endif
+#endif
+#ifneq ($(DEB_HOST_GNU_TYPE),$(DEB_BUILD_GNU_TYPE))
+#  with_pgo :=
+#endif
 
 ifneq (,$(filter $(DEB_HOST_ARCH), amd64 arm64 armel armhf i386 powerpc ppc64 ppc64el s390x x32))
   with_lto := yes
